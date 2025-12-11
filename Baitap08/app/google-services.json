@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "548010420544",
+    "project_id": "android-app-learn",
+    "storage_bucket": "android-app-learn.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:548010420544:android:3b22ab79f92d2229e432a5",
+        "android_client_info": {
+          "package_name": "com.vibecoding.baitap08"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGxH4DSLvHwQWUHpP9B9a5F_Gl33S9pQ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
