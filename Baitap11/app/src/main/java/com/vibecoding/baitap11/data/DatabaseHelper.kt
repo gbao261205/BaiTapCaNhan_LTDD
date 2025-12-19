@@ -125,7 +125,10 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         val selection = "$COLUMN_TASK_USER_ID = ?"
         val selectionArgs = arrayOf(userId.toString())
         
-        val cursor = db.query(TABLE_TASKS, null, selection, selectionArgs, null, null, null)
+        // Sắp xếp: chưa hoàn thành (is_completed = 0) trước, hoàn thành (is_completed = 1) sau
+        val orderBy = "$COLUMN_IS_COMPLETED ASC, $COLUMN_TASK_ID DESC"
+        
+        val cursor = db.query(TABLE_TASKS, null, selection, selectionArgs, null, null, orderBy)
 
         if (cursor.moveToFirst()) {
             do {

@@ -64,4 +64,15 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         loadTasks()
         message.value = "Task deleted"
     }
+
+    fun onUpdateTask(task: Task, newTitle: String, newDesc: String) {
+        val updatedTask = task.copy(title = newTitle, description = newDesc)
+        val result = dbHelper.updateTask(updatedTask)
+        if (result > 0) {
+            loadTasks()
+            message.value = "Task updated"
+        } else {
+            message.value = "Failed to update task"
+        }
+    }
 }
